@@ -69,8 +69,18 @@
 
             div {
                 height: 2px;
-                background-color: rgb(var(--white));
                 
+                animation: colormove 5s infinite;
+                
+            }
+
+            @keyframes colormove {
+                from {
+                    background: linear-gradient(to right, #fff 0%, transparent 100%)
+                }
+                to {
+                    background: linear-gradient(to right, #fff 0%, #fff 100%)
+                }
             }
         }
     }
