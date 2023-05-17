@@ -56,12 +56,16 @@
                         <span>{{ item.subT }}</span>
                     </p>
                     <ul data-nav-modal-list>
-                        
-                        <li v-for="subItem in item.childrens">
-                            <router-link :to="subItem.subTo">
+                        <router-link :to="subItem.subTo" v-if="item.title != '제품소개'" v-for="subItem in item.childrens">
+                            <li>
+                                    {{ subItem.subTitle }}
+                            </li>
+                        </router-link>
+                        <router-link :to="{name: 'Prod', params: {category: subItem.category}}" v-else v-for="subItem in item.childrens">
+                            <li>
                                 {{ subItem.subTitle }}
-                            </router-link>
-                        </li>
+                            </li>
+                        </router-link>
                     </ul>
                 </div>
             </section>
@@ -348,9 +352,9 @@
             }
         }
 
-        #navModalBtn {
+        #navModalBtn.nav-modal-btn-absolute {
             margin-top: 0;
-            margin-left: auto;
+            margin-left: 0;
         }
 
     }
