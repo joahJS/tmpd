@@ -84,5 +84,20 @@
         pointer-events: none;
     }
 
+    //mediaquery
+    @media screen and (max-width: 767px) {
+        footer {
+            > .common-inner {
+                @apply flex-col;
+
+                [data-ft-logo] {
+                    width: fit-content;
+                }
+            }
+        }
+
+        
+    }
+
 
 </style>
