@@ -90,3 +90,10 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
+
+    //mediaquery
+    @media (max-width: 767px) {
+        body [data-common-head-title] {
+            font-size: var(--fontST);
+        }
+    }

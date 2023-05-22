@@ -13,9 +13,9 @@
                     <div data-item-img>
                         <img :src="item.imgSrc" alt="">
                     </div>
-                    <hgroup class="common-ellipsis">
-                        <h2>{{ item.title }}</h2>
-                        <p>{{ item.subTitle }}</p>
+                    <hgroup>
+                        <h2 class="common-ellipsis">{{ item.title }}</h2>
+                        <p class="common-ellipsis">{{ item.subTitle }}</p>
                     </hgroup>
                 </router-link>
             </div>
@@ -63,6 +63,10 @@
             @apply flex;
 
             user-select: none;
+
+            h2 {
+
+            }
         }
 
     }
@@ -84,6 +88,10 @@
         gap: .5rem;
         -webkit-line-clamp: 1;
 
+        .common-ellipsis {
+            -webkit-line-clamp: 1;
+        }
+
         h2 {
             font-size: var(--fontMT);
             font-weight: bold;
@@ -91,6 +99,21 @@
 
         p {
             font-size: var(--fontM);
+            min-width: 8rem;
         }
     }
+
+        //mediaquery
+        @media (max-width: 767px) {
+            #prodTexts {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem 1.5rem;
+            }
+
+            [data-prod-item] {
+                hgroup {
+                    @apply flex-col;
+                }
+            }
+        }
 </style>

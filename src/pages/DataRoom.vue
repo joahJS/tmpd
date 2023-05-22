@@ -117,6 +117,8 @@
         }
 
         [data-dataroom-item] {
+            gap: 1rem;
+
             img {
                 object-fit: contain;
                 width: 8rem;

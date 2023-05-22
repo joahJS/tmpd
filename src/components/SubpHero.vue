@@ -86,6 +86,13 @@
 
         [data-subp-tap] li {
             padding: .5rem 0;
+            font-size: var(--fontM);
+        }
+
+        [data-path-subtexts] {
+            p {
+                gap: 1rem;
+            }
         }
     }
 </style>
