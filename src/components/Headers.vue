@@ -251,9 +251,9 @@
         }
 
         &.nav-modal-btn-absolute {
-            @apply absolute;
+            @apply relative;
 
-            right: 0;
+            right: auto;
             margin-left: 3.25rem;
         }
 
@@ -296,7 +296,7 @@
 
             color: rgb(var(--white));
 
-            &+div {
+            & + div {
                 margin-top: 3.75rem;
             }
         }
@@ -312,7 +312,7 @@
     }
 
     [data-nav-modal-head] {
-        font-size: 2rem;
+        font-size: var(--fontT);
         font-weight: 300;
         user-select: none;
 
@@ -340,6 +340,25 @@
 
     //mediaquery
     @media (max-width: 767px) {
+
+        header #navModalBtn {
+            right: 0;
+        }
+
+        header {
+            > .common-inner {
+                justify-content: space-between;        
+            }
+        }
+
+        [data-nav-modal-head] {
+            font-size: var(--fontST);
+        }
+        
+        [data-nav-modal-list] {
+            gap: 1rem;
+        }
+
         nav {
             display: none;
         }
@@ -349,6 +368,13 @@
 
             > section {
                 width: 80%;
+            }
+
+            [data-nav-modal-menus] {
+
+                & + div {
+                    margin-top: 2.5rem;
+                }
             }
         }
 

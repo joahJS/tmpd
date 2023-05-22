@@ -70,12 +70,19 @@
   -webkit-line-clamp: 2;
 }
 
+@media (max-width: 767px) {
+  body [data-common-head-title] {
+    font-size: var(--fontST);
+  }
+}
 /* _variable.scss */
 :root {
   --fontBase: 1rem;
-  --fontM: 0.9rem;
+  --fontM: 14px;
   --font32: 2rem;
   --fontMT: 1.25rem;
+  --fontST: 1.5rem;
+  --fontT: 2rem;
   --black: 0, 0, 0,;
   --white: 255, 255, 255;
   --main-clr: 13, 26, 91;

@@ -225,7 +225,29 @@
             gap: 1rem;
         }
 
+        [data-notice-item] {
+            padding: 1.5rem 2rem;
+        }
+
+        [data-notice-item-texts] {
+            h3 {
+                margin-top: 1.5rem;
+            }
+        }
+
+        [data-notice-item-dates] {
+
+            h2 {
+                font-size: var(--fontST);
+            }
+        }
+
         [data-notice-modal] {
+
+            [data-notice-item-dates] {
+                padding-bottom: 1rem;
+            }
+
             [data-notice-modal-texts] {
                 padding: 1.5rem 1.5rem 5rem 1.5rem;
                 min-height: 50vh;
@@ -240,6 +262,17 @@
                     font-size: var(--fontM);
                 }
 
+            }
+
+            [data-notice-item-texts] {
+
+                h3 {
+                    margin-top: 2rem;
+                }
+
+                p {
+                    line-height: 1.75;
+                }
             }
         }
     }
